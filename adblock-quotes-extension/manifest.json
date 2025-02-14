@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Motivational Ad Blocker",
+    "version": "1.0",
+    "description": "Blocks ads and replaces them with motivational tech quotes.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.webp",
+        "48": "icons/icon17.webp",
+        "128": "icons/icon18.webp"
+      }
+    }
+  }
+  
